@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acuario Alduey · Catálogo de productos</title>
+<meta name="description" content="Catálogo de productos de Acuario Alduey: peceras, filtros, alimentos, calentadores y más.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text y='52' font-size='52'>🐠</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="burbujas" aria-hidden="true"></div>
+  <svg class="pez pez1" viewBox="0 0 120 60" aria-hidden="true"><use href="#pez"/></svg>
+  <svg class="pez pez2" viewBox="0 0 120 60" aria-hidden="true"><use href="#pez"/></svg>
+  <svg class="pez pez3" viewBox="0 0 120 60" aria-hidden="true"><use href="#pez"/></svg>
+  <div class="hero-txt">
+    <p class="mini">🐟 Tu tienda de acuarios</p>
+    <h1>Acuario <span>Alduey</span></h1>
+    <p class="sub">Peceras, filtros, alimentos y todo para tus peces.<br>Mira nuestros productos y visítanos.</p>
+  </div>
+  <svg class="ola" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,45 L1440,80 L0,80 Z"/>
+  </svg>
+</header>
+
+<nav class="barra" aria-label="Filtros">
+  <div class="barra-in">
+    <input id="buscar" type="search" placeholder="🔍 Buscar producto o código…" autocomplete="off">
+    <select id="orden" aria-label="Ordenar">
+      <option value="">Orden: Normal</option>
+      <option value="asc">Precio: menor a mayor</option>
+      <option value="desc">Precio: mayor a menor</option>
+      <option value="az">Nombre A–Z</option>
+    </select>
+  </div>
+  <div class="chips" id="chips"></div>
+</nav>
+
+<main>
+  <p class="cuenta" id="cuenta"></p>
+  <section class="grid" id="grid"></section>
+  <p class="vacio" id="vacio" hidden>🐠 No encontramos productos con esa búsqueda.</p>
+</main>
+
+<footer>
+  <svg class="ola ola-pie" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,40 C240,0 480,80 720,40 C960,0 1200,70 1440,35 L1440,80 L0,80 Z"/>
+  </svg>
+  <div class="pie-in">
+    <h2>🐠 Acuario Alduey</h2>
+    <p>Precios en pesos dominicanos (RD$). Sujetos a cambio sin previo aviso y a disponibilidad en tienda.</p>
+    <a id="wa" class="btn-wa" hidden target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
+  </div>
+</footer>
+
+<!-- Pez reutilizable -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="pez" viewBox="0 0 120 60"><g transform="translate(120,0) scale(-1,1)">
+      <path d="M8,30 C28,2 76,2 96,30 C76,58 28,58 8,30 Z" fill="currentColor"/>
+      <path d="M92,30 L118,8 C112,24 112,36 118,52 Z" fill="currentColor" opacity=".8"/>
+      <circle cx="28" cy="25" r="4.5" fill="#fff"/><circle cx="27" cy="25" r="2" fill="#0b2a4a"/>
+      <path d="M52,12 Q60,30 52,48" stroke="#fff" stroke-opacity=".35" stroke-width="4" fill="none" stroke-linecap="round"/></g>
+    </symbol>
+  </defs>
+</svg>
+
+<script src="js/productos.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
