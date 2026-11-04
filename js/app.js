@@ -3,7 +3,7 @@
    Si lo dejas vacio ("") el boton de WhatsApp no aparece.
    EXT_FOTOS: formatos de foto que buscara en la carpeta /fotos
 ====================================================================== */
-const WHATSAPP = "";
+const WHATSAPP = "18292095831";
 const EXT_FOTOS = ["jpg", "jpeg", "png", "webp"];
 
 const CATEGORIAS = [
