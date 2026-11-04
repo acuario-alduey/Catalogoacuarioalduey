@@ -1,9 +1,11 @@
- /* ===== CONFIGURACION (edita aqui) ===================================
+/* ===== CONFIGURACION (edita aqui) ===================================
    WHATSAPP: tu numero con codigo de pais, sin + ni espacios. Ej: "18095551234"
-   Si lo dejas vacio ("") el boton de WhatsApp no aparece.
+   WHATSAPP_LINK: tu enlace de WhatsApp Business (wa.me/message/...). Si lo pones, el boton usa este enlace;
+   si lo dejas vacio ("") usa el numero. Si dejas los dos vacios el boton no aparece.
    EXT_FOTOS: formatos de foto que buscara en la carpeta /fotos
 ====================================================================== */
-const WHATSAPP = "";
+const WHATSAPP = "18292095831";
+const WHATSAPP_LINK = "https://wa.me/message/7RSYVLQJEWN2F1";
 const EXT_FOTOS = ["jpg", "jpeg", "png", "webp"];
 
 const CATEGORIAS = [
@@ -38,7 +40,7 @@ const MODO_FOTOS = new URLSearchParams(location.search).has("fotos");   // abre 
 })();
 
 // WhatsApp opcional
-if (WHATSAPP) { const a = $("wa"); a.hidden = false; a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Hola Acuario Alduey, quiero consultar por un producto."); }
+if (WHATSAPP || WHATSAPP_LINK) { const a = $("wa"); a.hidden = false; a.href = WHATSAPP_LINK || ("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Hola Acuario Alduey, quiero consultar por un producto.")); }
 
 // Chips
 function pintarChips() {
@@ -94,5 +96,3 @@ $("grid").addEventListener("click", e => { const c = e.target.closest(".card"); 
 $("buscar").addEventListener("input", pintar);
 $("orden").addEventListener("change", pintar);
 pintarChips(); pintar();
-
-    
