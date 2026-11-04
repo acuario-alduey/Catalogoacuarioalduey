@@ -38,7 +38,7 @@ const MODO_FOTOS = new URLSearchParams(location.search).has("fotos");   // abre 
 })();
 
 // WhatsApp opcional
-if (WHATSAPP) { const a = $("wa"); a.hidden = false; a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Hola Acuario Alduey, quiero consultar por un producto."); }
+if (WHATSAPP) { const a = $("wa"); a.hidden = false; a.href = https://wa.me/message/7RSYVLQJEWN2F1" + WHATSAPP + "?text=" + encodeURIComponent("Hola Acuario Alduey, quiero consultar por un producto."); }
 
 // Chips
 function pintarChips() {
