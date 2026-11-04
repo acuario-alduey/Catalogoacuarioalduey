@@ -3,7 +3,7 @@
    Si lo dejas vacio ("") el boton de WhatsApp no aparece.
    EXT_FOTOS: formatos de foto que buscara en la carpeta /fotos
 ====================================================================== */
-const WHATSAPP = "18292095831";
+const WHATSAPP = "";
 const EXT_FOTOS = ["jpg", "jpeg", "png", "webp"];
 
 const CATEGORIAS = [
@@ -38,7 +38,7 @@ const MODO_FOTOS = new URLSearchParams(location.search).has("fotos");   // abre 
 })();
 
 // WhatsApp opcional
-if (WHATSAPP) { const a = $("wa"); a.hidden = false; a.href = https://wa.me/message/7RSYVLQJEWN2F1" + WHATSAPP + "?text=" + encodeURIComponent("Hola Acuario Alduey, quiero consultar por un producto."); }
+if (WHATSAPP) { const a = $("wa"); a.hidden = false; a.href = https:" + WHATSAPP + "?text=" + encodeURIComponent("Hola Acuario Alduey, quiero consultar por un producto."); }
 
 // Chips
 function pintarChips() {
